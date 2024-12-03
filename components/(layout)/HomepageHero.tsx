@@ -1,9 +1,8 @@
-import { Star } from "lucide-react";
+import { Github, Star } from "lucide-react";
 import React from "react";
-
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const HomepageHero = () => {
   return (
@@ -19,9 +18,15 @@ const HomepageHero = () => {
             l'aide de notre plateforme Jobijoba !
           </p>
         </div>
-        <Button size="lg" className="mt-10">
-          Commencer
-        </Button>
+        <Link
+          href={"https://github.com/romainfb/hellowork-jobs"}
+          target="_blank"
+        >
+          <Button size="lg" className="mt-10">
+            <Github className="size-4" />
+            Romain Fouillade-Bardet
+          </Button>
+        </Link>
       </div>
     </section>
   );
